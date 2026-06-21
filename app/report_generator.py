@@ -29,13 +29,13 @@ for result in results:
     report.append(f"Score: {result['score']}")
 
     report.append("")
-report.append("Evidence:")
+    report.append("Evidence:")
 
-if result["issues"]:
-    for issue in result["issues"]:
-        report.append(f"- {issue}")
-else:
-    report.append("- No issues detected")
+    if result["issues"]:
+        for issue in result["issues"]:
+            report.append(f"- {issue}")
+    else:
+        report.append("- No issues detected")
 
 report.append("")
 report.append("Recommendation:")
