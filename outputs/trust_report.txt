@@ -15,12 +15,18 @@ Score: 100
 Evidence:
 - No issues detected
 
+Recommendation:
+Approve
+
 Store: Brooklyn Heights
 Confidence: MEDIUM
 Score: 80
 
 Evidence:
 - Missing ZIP code
+
+Recommendation:
+Review Recommended
 
 Store: LA Westside
 Confidence: HIGH
@@ -29,12 +35,18 @@ Score: 100
 Evidence:
 - No issues detected
 
+Recommendation:
+Approve
+
 Store: Miami Beach
 Confidence: MEDIUM
 Score: 80
 
 Evidence:
 - Missing franchise owner
+
+Recommendation:
+Review Recommended
 
 Store: Austin Downtown
 Confidence: HIGH
@@ -43,12 +55,18 @@ Score: 100
 Evidence:
 - No issues detected
 
+Recommendation:
+Approve
+
 Store: Seattle Pike
 Confidence: HIGH
 Score: 100
 
 Evidence:
 - No issues detected
+
+Recommendation:
+Approve
 
 Store: Downtown Chicago 2
 Confidence: HIGH
@@ -57,6 +75,9 @@ Score: 100
 Evidence:
 - No issues detected
 
+Recommendation:
+Approve
+
 Store: Phoenix Central
 Confidence: MEDIUM
 Score: 85
@@ -64,12 +85,18 @@ Score: 85
 Evidence:
 - Missing region
 
+Recommendation:
+Review Recommended
+
 Store: Boston Back Bay
 Confidence: MEDIUM
 Score: 80
 
 Evidence:
 - Invalid menu board count: four
+
+Recommendation:
+Review Recommended
 
 Store: Denver Union
 Confidence: HIGH
@@ -80,5 +107,6 @@ Evidence:
 
 Recommendation:
 Approve
+Human Review Required
 
 --------------------------------------------------

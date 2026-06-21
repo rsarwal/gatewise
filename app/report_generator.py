@@ -37,13 +37,13 @@ for result in results:
     else:
         report.append("- No issues detected")
 
-report.append("")
-report.append("Recommendation:")
+    report.append("")
+    report.append("Recommendation:")
 
-if result["confidence"] == "HIGH":
-    report.append("Approve")
-elif result["confidence"] == "MEDIUM":
-    report.append("Review Recommended")
+    if result["confidence"] == "HIGH":
+        report.append("Approve")
+    elif result["confidence"] == "MEDIUM":
+        report.append("Review Recommended")
 else:
     report.append("Human Review Required")
 
