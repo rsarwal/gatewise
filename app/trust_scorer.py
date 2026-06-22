@@ -1,6 +1,7 @@
 import pandas as pd
 from evidence_agent import collect_evidence
 from trust_agent import assess_trust
+from duplicate_agent import find_duplicates
 
 
 def score_stores():
@@ -12,8 +13,8 @@ def score_stores():
     for index, row in stores.iterrows():
 
         evidence = collect_evidence(row)
-        trust = assess_trust(evidence)
 
+        trust = assess_trust(evidence)
 
         results.append({
             "store_name": row["Store Name"],
@@ -23,4 +24,9 @@ def score_stores():
             "issues": evidence
         })
 
-    return results
+    duplicates = find_duplicates(results)
+
+    return {
+        "results": results,
+        "duplicates": duplicates
+    }

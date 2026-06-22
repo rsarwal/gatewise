@@ -1,7 +1,10 @@
 from trust_scorer import score_stores
 from review_agent import review_recommendation
 
-results = score_stores()
+data = score_stores()
+
+results = data["results"]
+duplicates = data["duplicates"]
 
 high_count = sum(1 for r in results if r["confidence"] == "HIGH")
 medium_count = sum(1 for r in results if r["confidence"] == "MEDIUM")
@@ -49,6 +52,26 @@ for result in results:
 
 report.append("")
 report.append("-" * 50)
+
+report.append("")
+report.append("=" * 50)
+report.append("DUPLICATE ALERTS")
+report.append("=" * 50)
+
+if duplicates:
+
+    for duplicate in duplicates:
+        report.append(
+            f"{duplicate[0]} <-> {duplicate[1]}"
+        )
+
+else:
+    report.append("No duplicates detected")
+
+with open("outputs/trust_report.txt", "w") as file:
+    file.write("\n".join(report))
+
+print("Trust report generated successfully.")
 
 
 
